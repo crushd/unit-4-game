@@ -4,3 +4,41 @@ html, body {
     width:100%;
     height:100%;
 }
+
+header h1 {
+    font-family: 'Bungee Inline', cursive;
+    text-align:center;
+    padding:1rem 0;
+}
+
+.jumbotron {
+    background: url(../images/bananas.png);
+}
+
+#random-number {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 3em;
+    /*font-weight:bold;*/
+    padding-bottom:1rem;
+    text-align: center;
+}
+
+#crystalRow i {
+    font-size:4em;
+}
+
+#red {
+    color:red;
+}
+
+#green {
+    color:green;
+}
+
+#black {
+    color:black;
+}
+
+#goldenrod {
+    color:goldenrod;
+}
