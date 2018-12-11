@@ -51,6 +51,11 @@ header h1 {
     opacity: .75;
 }
 
+.alert {
+    font-weight:bold;
+    box-shadow: 5px 5px 8px #888888;
+}
+
 .card-body {
     text-align: justify;
 }
