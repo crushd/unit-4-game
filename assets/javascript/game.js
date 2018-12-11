@@ -18,6 +18,11 @@ var maxCrystalNumber   = 12;  // this is the maximum crystal value
 // get the computer random number
 var gameNumber   = getRandomNumber(minGameNumber,maxGameNumber);
 
+document.getElementById("crystal-one-text").innerHTML       = "\u00A0";
+document.getElementById("crystal-two-text").innerHTML       = "\u00A0";
+document.getElementById("crystal-three-text").innerHTML     = "\u00A0";
+document.getElementById("crystal-four-text").innerHTML      = "\u00A0";
+
 // get a random number between a minimum and maximum value
 function getRandomNumber(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -36,10 +41,10 @@ function resetGame() {
     userNumberTotal = 0;
     gameNumber = getRandomNumber(minGameNumber,maxGameNumber);
     generateCrystals(4);
-    document.getElementById("crystal-one-text").textContent     = "";
-    document.getElementById("crystal-two-text").textContent     = "";
-    document.getElementById("crystal-three-text").textContent   = "";
-    document.getElementById("crystal-four-text").textContent    = "";
+    document.getElementById("crystal-one-text").innerHTML       = "\u00A0";
+    document.getElementById("crystal-two-text").innerHTML       = "\u00A0";
+    document.getElementById("crystal-three-text").innerHTML     = "\u00A0";
+    document.getElementById("crystal-four-text").innerHTML      = "\u00A0";
 }
 
 // check the users total against the computer value, if the total is 

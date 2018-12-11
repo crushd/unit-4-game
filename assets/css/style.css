@@ -64,3 +64,49 @@ header h1 {
 footer {
     padding:3rem;
 }
+
+
+
+
+
+@media only screen and (max-width : 1200px) {
+    header h1 {
+        color:black;
+    }
+
+}
+
+@media only screen and (max-width : 979px) {
+    header h1 {
+        color:black;
+    }
+    .card {
+        margin-bottom:2em;
+    }
+
+}
+
+@media only screen and (max-width : 767px) {
+    header h1 {
+        color:black;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    header h1 {
+        color:black;
+        font-size:2em;
+    }
+
+    i.fas {
+        font-size:.5em;
+    }
+
+}
+
+@media only screen and (max-width : 320px) {
+    header h1 {
+        color:black;
+    }
+
+}
