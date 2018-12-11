@@ -52,6 +52,7 @@ header h1 {
 }
 
 .alert {
+    margin-top:2em;
     font-weight:bold;
     box-shadow: 5px 5px 8px #888888;
 }
