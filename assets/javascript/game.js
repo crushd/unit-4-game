@@ -46,17 +46,46 @@ function checkUserNumber(crystalTotalValue) {
     console.log(userNumberTotal);
 }
 
-
-
 // generate the gameCrystals
 generateCrystals(4);
 console.log("Crystals: " + crystals);
 
+$(document).ready(function(){
+    $("#crystal-one-crystal").click(function() {
+        console.log("Crystal one clicked:" + crystals[0]);
+        userNumberTotal = userNumberTotal + crystals[0];
+        console.log("User Number total:" + userNumberTotal);
+        document.getElementById("user-number").textContent  = userNumberTotal;
+    });
+    
+    $("#crystal-two-crystal").click(function() {
+        console.log("Crystal two clicked:" + crystals[1]);
+        userNumberTotal += crystals[1];
+        console.log("User Number total:" + userNumberTotal);
+        document.getElementById("user-number").textContent  = userNumberTotal;
+    });
+    
+    $("#crystal-three-crystal").click(function() {
+        console.log("Crystal three clicked:" + crystals[2]);
+        userNumberTotal += crystals[2];
+        console.log("User Number total:" + userNumberTotal);
+        document.getElementById("user-number").textContent  = userNumberTotal;
+    });
+    
+    $("#crystal-four-crystal").click(function() {
+        console.log("Crystal four clicked:" + crystals[3]);
+        userNumberTotal += crystals[3];
+        console.log("User Number total:" + userNumberTotal);
+        document.getElementById("user-number").textContent  = userNumberTotal;
+    });
+});
+
+document.getElementById("user-number").textContent  = 0;
 document.getElementById("random-number").textContent = gameNumber;
-// document.getElementById("crystal-one").textContent   = crystals[0];
-// document.getElementById("crystal-two").textContent   = crystals[1];
-// document.getElementById("crystal-three").textContent = crystals[2];
-// document.getElementById("crystal-four").textContent  = crystals[3];
+// document.getElementById("crystal-one-text").textContent   = crystals[0];
+// document.getElementById("crystal-two-text").textContent   = crystals[1];
+// document.getElementById("crystal-three-text").textContent = crystals[2];
+// document.getElementById("crystal-four-text").textContent  = crystals[3];
 
 document.getElementById("rule-one").textContent   = "The computer picks a random number between " + minGameNumber + " and " + maxGameNumber +". Click crystals to match the computer's number.";
 document.getElementById("rule-two").textContent   = "Each crystal is worth a random value between " +minCrystalNumber+ " and " +maxCrystalNumber+". Click a crystal to add that value to your total score.";
