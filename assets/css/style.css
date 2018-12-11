@@ -89,13 +89,14 @@ footer {
 @media only screen and (max-width : 767px) {
     header h1 {
         color:black;
+        font-size:2.5em;
     }
 }
 
 @media only screen and (max-width : 480px) {
     header h1 {
         color:black;
-        font-size:2em;
+        font-size:2.25em;
     }
 
     i.fas {
