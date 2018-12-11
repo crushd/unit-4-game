@@ -2,6 +2,63 @@
 // codyrush@gmail.com
 // 2018-12-10
 
-var randomNumber = (Math.floor(Math.random()*100)+1);
+var crystals           = []; // set up an empty crystals array
+var userNumberTotal    = 0; // initialize the users total to zero
 
-document.getElementById("random-number").textContent = randomNumber;
+// Computer min and max values
+var minGameNumber      = 19;
+var maxGameNumber      = 120;
+
+// Crystal min and max values
+var minCrystalNumber   = 1;
+var maxCrystalNumber   = 12;
+
+// get the computer random number
+var gameNumber   = getRandomNumber(minGameNumber,maxGameNumber);
+console.log("Computer: " + gameNumber);
+
+// a function to get a random number between a minimum and maximum value
+function getRandomNumber(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+// a function to generate n number of crystals and get a random value for each
+function generateCrystals(crystalCount) {
+    for (i = 0 ; i < crystalCount ; i++) {
+        crystals.push(getRandomNumber(minCrystalNumber,maxCrystalNumber));
+        //console.log(i + ": " + crystals[i]);
+    }
+}
+
+// check the users total against the computer value, if the total is 
+// greater than the computer: game over, if it's equal: win!
+function checkUserNumber(crystalTotalValue) {
+    userNumberTotal += crystalTotalValue;
+
+    if (userNumberTotal === gameNumber) {
+        console.log("Winner!");
+    } else if (userNumberTotal > gameNumber) {
+        console.log("Game over.");
+    } else {
+        console.log("Still playing.");
+    }
+
+    console.log(userNumberTotal);
+}
+
+
+
+// generate the gameCrystals
+generateCrystals(4);
+console.log("Crystals: " + crystals);
+
+document.getElementById("random-number").textContent = gameNumber;
+document.getElementById("crystal-one").textContent   = crystals[0];
+document.getElementById("crystal-two").textContent   = crystals[1];
+document.getElementById("crystal-three").textContent = crystals[2];
+document.getElementById("crystal-four").textContent  = crystals[3];
+
+document.getElementById("rule-one").textContent   = "The computer picks a random number between " + minGameNumber + " and " + maxGameNumber;
+document.getElementById("rule-two").textContent   = "Each crystal is worth a random value between " +minCrystalNumber+ " and " +maxCrystalNumber+". Click a crystal to add that value to your total score.";
+document.getElementById("rule-three").textContent = "The values are hidden until you click on the crystal and update each time you play a new game.";
+document.getElementById("rule-four").textContent  = "Win by adding up crystals to match the random computer number. Go over and you lose. Good luck!";
