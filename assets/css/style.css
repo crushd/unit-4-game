@@ -26,7 +26,8 @@ header h1 {
 }
 
 #crystalRow i {
-    font-size:4em;
+    font-size:5em;
+    padding:.5em 0;
 }
 
 #red {
@@ -37,8 +38,8 @@ header h1 {
     color:green;
 }
 
-#black {
-    color:black;
+#purple {
+    color:purple;
 }
 
 #goldenrod {

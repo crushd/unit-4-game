@@ -53,12 +53,12 @@ generateCrystals(4);
 console.log("Crystals: " + crystals);
 
 document.getElementById("random-number").textContent = gameNumber;
-document.getElementById("crystal-one").textContent   = crystals[0];
-document.getElementById("crystal-two").textContent   = crystals[1];
-document.getElementById("crystal-three").textContent = crystals[2];
-document.getElementById("crystal-four").textContent  = crystals[3];
+// document.getElementById("crystal-one").textContent   = crystals[0];
+// document.getElementById("crystal-two").textContent   = crystals[1];
+// document.getElementById("crystal-three").textContent = crystals[2];
+// document.getElementById("crystal-four").textContent  = crystals[3];
 
 document.getElementById("rule-one").textContent   = "The computer picks a random number between " + minGameNumber + " and " + maxGameNumber +". Click crystals to match the computer's number.";
 document.getElementById("rule-two").textContent   = "Each crystal is worth a random value between " +minCrystalNumber+ " and " +maxCrystalNumber+". Click a crystal to add that value to your total score.";
-document.getElementById("rule-three").textContent = "The values of the crystals are hidden until you click on the crystal and update each time you play a new game.";
+document.getElementById("rule-three").textContent = "The values of the crystals are hidden until you click on the crystal and will update each time you play a new game.";
 document.getElementById("rule-four").textContent  = "Win by adding up crystals to match the random computer number. Go over and you lose. Good luck!";
